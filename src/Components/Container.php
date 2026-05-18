@@ -345,10 +345,10 @@ abstract class Container extends \Nette\Application\UI\Control
 
     /**
      * @param string $name
-     * @param \Nette\Forms\IControl $formControl
+     * @param \Nette\Forms\Control $formControl
      * @return Filters\Custom
      */
-    public function addFilterCustom($name, \Nette\Forms\IControl $formControl)
+    public function addFilterCustom($name, \Nette\Forms\Control $formControl)
     {
         return new Filters\Custom($this, $name, NULL, $formControl);
     }

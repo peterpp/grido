@@ -415,10 +415,10 @@ abstract class Column extends \Grido\Components\Component
     }
 
     /**
-     * @param \Nette\Forms\IControl $formControl
+     * @param \Nette\Forms\Control $formControl
      * @return \Grido\Components\Filters\Custom
      */
-    public function setFilterCustom(\Nette\Forms\IControl $formControl)
+    public function setFilterCustom(\Nette\Forms\Control $formControl)
     {
         return $this->grid->addFilterCustom($this->getName(), $formControl);
     }

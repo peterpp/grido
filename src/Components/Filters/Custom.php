@@ -18,20 +18,20 @@ namespace Grido\Components\Filters;
  * @subpackage  Components\Filters
  * @author      Petr Bugyík
  *
- * @property-read \Nette\Forms\IControl $formControl
+ * @property-read \Nette\Forms\Control $formControl
  */
 class Custom extends Filter
 {
-    /** @var \Nette\Forms\IControl */
+    /** @var \Nette\Forms\Control */
     protected $formControl;
 
     /**
      * @param \Grido\Grid $grid
      * @param string $name
      * @param string $label
-     * @param \Nette\Forms\IControl $formControl
+     * @param \Nette\Forms\Control $formControl
      */
-    public function __construct($grid, $name, $label, \Nette\Forms\IControl $formControl)
+    public function __construct($grid, $name, $label, \Nette\Forms\Control $formControl)
     {
         $this->formControl = $formControl;
 
@@ -39,7 +39,7 @@ class Custom extends Filter
     }
 
     /**
-     * @return \Nette\Forms\IControl
+     * @return \Nette\Forms\Control
      * @internal
      */
     public function getFormControl()

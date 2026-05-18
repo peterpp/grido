@@ -21,7 +21,7 @@ use Grido\Exception;
  * @author      Jakub Kopřiva <kopriva.jakub@gmail.com>
  * @author      Petr Bugyík
  *
- * @property \Nette\Forms\IControl $editableControl
+ * @property \Nette\Forms\Control $editableControl
  * @property callback $editableCallback
  * @property callback $editableValueCallback
  * @property callback $editableRowCallback
@@ -36,7 +36,7 @@ abstract class Editable extends Column
     /** @var bool */
     protected $editableDisabled = FALSE;
 
-    /** @var \Nette\Forms\IControl Custom control for inline editing */
+    /** @var \Nette\Forms\Control Custom control for inline editing */
     protected $editableControl;
 
     /** @var callback for custom handling with edited data; function($id, $newValue, $oldValue, Editable $column) {} */
@@ -51,10 +51,10 @@ abstract class Editable extends Column
     /**
      * Sets column as editable.
      * @param callback $callback function($id, $newValue, $oldValue, Columns\Editable $column) {}
-     * @param \Nette\Forms\IControl $control
+     * @param \Nette\Forms\Control $control
      * @return Editable
      */
-    public function setEditable($callback = NULL, \Nette\Forms\IControl $control = NULL)
+    public function setEditable($callback = NULL, \Nette\Forms\Control $control = NULL)
     {
         $this->editable = TRUE;
         $this->setClientSideOptions();
@@ -67,10 +67,10 @@ abstract class Editable extends Column
 
     /**
      * Sets control for inline editation.
-     * @param \Nette\Forms\IControl $control
+     * @param \Nette\Forms\Control $control
      * @return Editable
      */
-    public function setEditableControl(\Nette\Forms\IControl $control)
+    public function setEditableControl(\Nette\Forms\Control $control)
     {
         $this->isEditable() ?: $this->setEditable();
         $this->editableControl = $control;
